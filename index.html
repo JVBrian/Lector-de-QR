@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
     <title>Lector QR</title>
 </head>
 <body>
     <div class="wrapper">
         <form action="#">
-            <input type="file">
+            <input type="file" hidden>
             <img src="#" alt="qr-img">
 
             <div class="content">
@@ -16,6 +17,7 @@
             </div>
         </form>
         <div class="details">
+            <textarea disabled></textarea>
             <div class="buttons">
                 <button>Cerrar</button>
                 <button>Copiar</button>

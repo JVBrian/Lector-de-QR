@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #fff;
+}
+
+::selection {
+  color: #fff;
+  background: #2193b0;
+}
+
+.wrapper {
+  text-align: center;
+  height: 270px;
+  background: #2193b0;
+  width: 420px;
+  border-radius: 7px;
+  padding: 30px 30px 35px;
+  transition: height 0.2s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper.active {
+  height: 525px;
+}
+
+.wrapper.active form .content {
+  display: none;
+}
+
+form img {
+  display: none;
+  max-width: 148px;
+}
+
+.wrapper.active form img {
+  display: block;
+}
+
+.wrapper form {
+  height: 210px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  text-align: center;
+  transition: height 0.2s ease;
+  width: 100%;
+  border-radius: 7px;
+  background: #2193b0;
+  padding: 30px 30px 35px;
+}
+
+p {
+  margin-top: 15px;
+  font-size: 25px;
+  font-weight: 800;
+  text-align: center;
+  color: white;
+}
+
+.buttons button {
+  color: #2193b0;
+  height: 55px;
+  outline: none;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 17px;
+  background: #fff;
+  padding: 5px 10px;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.13);
+}
+
+.buttons button:active {
+  transform: scale(0.95);
+}
+
+.wrapper .details {
+  opacity: 0;
+  margin-top: 25px;
+  pointer-events: none;
+}
+
+.wrapper.active .details {
+  opacity: 1;
+  transition: opacity 0.5s 0.5s ease;
+  pointer-events: auto;
+}
