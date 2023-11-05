@@ -9,7 +9,7 @@ const wrapper = document.querySelector(".wrapper"),
 // Consumo de la API
 function fetchRequest(file, formData) {
   infoText.innerText = "Escaneando...";
-  fetch("http://api.qrserver.com/v1/read-qr-code/", {
+  fetch("https://api.qrserver.com/v1/read-qr-code/", {
     method: "POST",
     body: formData,
   }).then((res) =>
